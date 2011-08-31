@@ -1,9 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.android.deskclock"
+        package="com.hemi12.deskclock"
         android:versionCode="202" android:versionName="2.0.2">
-
-    <original-package android:name="com.android.alarmclock" />
-    <original-package android:name="com.android.deskclock" />
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
@@ -17,7 +14,7 @@
                  android:icon="@drawable/ic_launcher_alarmclock">
 
         <provider android:name="AlarmProvider"
-                android:authorities="com.android.deskclock"
+                android:authorities="com.hemi12.deskclock"
                 android:exported="false" />
 
         <activity android:name="DeskClock"
@@ -46,8 +43,8 @@
                 android:configChanges="orientation|keyboardHidden|keyboard|navigation"
                 android:exported="true" />
 
-        <activity-alias android:name="com.android.alarmclock.AlarmClock"
-                android:targetActivity="com.android.deskclock.AlarmClock"
+        <activity-alias android:name="com.hemi12.alarmclock.AlarmClock"
+                android:targetActivity="com.hemi12.deskclock.AlarmClock"
                 android:exported="true" />
 
         <activity android:name="SettingsActivity"
@@ -82,7 +79,7 @@
 
         <receiver android:name="AlarmReceiver">
             <intent-filter>
-                <action android:name="com.android.deskclock.ALARM_ALERT" />
+                <action android:name="com.hemi12.deskclock.ALARM_ALERT" />
                 <action android:name="alarm_killed" />
                 <action android:name="cancel_snooze" />
             </intent-filter>
@@ -108,7 +105,7 @@
                 android:description="@string/alarm_klaxon_service_desc"
                 >
             <intent-filter>
-                <action android:name="com.android.deskclock.ALARM_ALERT" />
+                <action android:name="com.hemi12.deskclock.ALARM_ALERT" />
             </intent-filter>
         </service>
 
@@ -121,12 +118,12 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.android.alarmclock.AnalogAppWidgetProvider" android:label="@string/analog_gadget"
+        <receiver android:name="com.hemi12.alarmclock.AnalogAppWidgetProvider" android:label="@string/analog_gadget"
         	android:icon="@drawable/ic_widget_analog_clock">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
-            <meta-data android:name="android.appwidget.oldName" android:value="com.android.deskclock.AnalogAppWidgetProvider" />
+            <meta-data android:name="android.appwidget.oldName" android:value="com.hemi12.deskclock.AnalogAppWidgetProvider" />
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/analog_appwidget" />
         </receiver>
     </application>

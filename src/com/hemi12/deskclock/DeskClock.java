@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.deskclock;
+package com.hemi12.deskclock;
 
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -93,18 +93,18 @@ import java.util.Random;
  * DeskClock clock view for desk docks.
  */
 public class DeskClock extends Activity {
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG = true;
 
     private static final String LOG_TAG = "DeskClock";
 
     // Alarm action for midnight (so we can update the date display).
-    private static final String ACTION_MIDNIGHT = "com.android.deskclock.MIDNIGHT";
+    private static final String ACTION_MIDNIGHT = "com.hemi12.deskclock.MIDNIGHT";
 
     // Interval between forced polls of the weather widget.
     private final long QUERY_WEATHER_DELAY = 60 * 60 * 1000; // 1 hr
 
     // Intent to broadcast for dock settings.
-    private static final String DOCK_SETTINGS_ACTION = "com.android.settings.DOCK_SETTINGS";
+    private static final String DOCK_SETTINGS_ACTION = "com.hemi12.settings.DOCK_SETTINGS";
 
     // Delay before engaging the burn-in protection mode (green-on-black).
     private final long SCREEN_SAVER_TIMEOUT = 5 * 60 * 1000; // 5 min

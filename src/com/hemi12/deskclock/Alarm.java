@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.deskclock;
+package com.hemi12.deskclock;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -72,7 +72,7 @@ public final class Alarm implements Parcelable {
          * The content:// style URL for this table
          */
         public static final Uri CONTENT_URI =
-                Uri.parse("content://com.android.deskclock/alarm");
+          Uri.parse("content://com.hemi12.deskclock/alarm");
 
         /**
          * Hour in 24-hour localtime 0 - 23.
@@ -338,7 +338,8 @@ public final class Alarm implements Parcelable {
                 return -1;
             }
 
-            int today = (c.get(Calendar.DAY_OF_WEEK) + 5) % 7;
+            int today = c.get(Calendar.DAY_OF_WEEK); 
+            today = (today + 5) % 7;
 
             int day = 0;
             int dayCount = 0;

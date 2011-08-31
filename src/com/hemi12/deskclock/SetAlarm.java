@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.deskclock;
+package com.hemi12.deskclock;
 
 import android.app.AlertDialog;
 import android.app.TimePickerDialog;

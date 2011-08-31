@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.android.alarmclock;
+package com.hemi12.alarmclock;
 
-import com.android.deskclock.AlarmClock;
-import com.android.deskclock.R;
+import com.hemi12.deskclock.AlarmClock;
+import com.hemi12.deskclock.R;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;

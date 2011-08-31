@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.deskclock;
+package com.hemi12.deskclock;
 
 import android.content.Context;
 import android.media.Ringtone;
